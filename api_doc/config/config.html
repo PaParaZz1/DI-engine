@@ -318,17 +318,56 @@
 <h3>read_config<a class="headerlink" href="#read-config" title="Permalink to this headline">¶</a></h3>
 <dl class="py function">
 <dt id="ding.config.config.read_config">
-<code class="sig-prename descclassname">ding.config.config.</code><code class="sig-name descname">read_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cfg</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">direct</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>dict<span class="p">, </span>dict<span class="p">]</span><a class="reference internal" href="../../_modules/ding/config/config.html#read_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ding.config.config.read_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">ding.config.config.</code><code class="sig-name descname">read_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>dict<span class="p">, </span>dict<span class="p">]</span><a class="reference internal" href="../../_modules/ding/config/config.html#read_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ding.config.config.read_config" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
-<dt>Overview:</dt><dd><p>read configuration from python file</p>
+<dt>Overview:</dt><dd><p>Read configuration from a file path(now only suport python file). And select some proper parts.</p>
 </dd>
 <dt>Arguments:</dt><dd><ul class="simple">
-<li><p>cfg (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>): Path of python file</p></li>
-<li><p>direct (<code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code>): Read config directly if direct is true or divide config into main_config,            create_config and system_config if direct is false</p></li>
+<li><p>path (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>): Path of configuration file</p></li>
 </ul>
 </dd>
 <dt>Returns:</dt><dd><ul class="simple">
-<li><p>cfg (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Tuple[dict,</span> <span class="pre">dict]</span></code>): Config dict, such as [main_config, create_config, system_config]            or main_config, create_config, system_config</p></li>
+<li><p>cfg (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Tuple[dict,</span> <span class="pre">dict]</span></code>): A collection(tuple) of configuration dict, divided into <cite>main_config</cite> and             <cite>create_cfg</cite> two parts.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="read-config-directly">
+<h3>read_config_directly<a class="headerlink" href="#read-config-directly" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt id="ding.config.config.read_config_directly">
+<code class="sig-prename descclassname">ding.config.config.</code><code class="sig-name descname">read_config_directly</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; dict<a class="reference internal" href="../../_modules/ding/config/config.html#read_config_directly"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ding.config.config.read_config_directly" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Overview:</dt><dd><p>Read configuration from a file path(now only suport python file) and directly return results.</p>
+</dd>
+<dt>Arguments:</dt><dd><ul class="simple">
+<li><p>path (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>): Path of configuration file</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><ul class="simple">
+<li><p>cfg (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Tuple[dict,</span> <span class="pre">dict]</span></code>): Configuration dict.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="read-config-with-system">
+<h3>read_config_with_system<a class="headerlink" href="#read-config-with-system" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt id="ding.config.config.read_config_with_system">
+<code class="sig-prename descclassname">ding.config.config.</code><code class="sig-name descname">read_config_with_system</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>dict<span class="p">, </span>dict<span class="p">, </span>dict<span class="p">]</span><a class="reference internal" href="../../_modules/ding/config/config.html#read_config_with_system"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ding.config.config.read_config_with_system" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Overview:</dt><dd><p>Read configuration from a file path(now only suport python file). And select some proper parts</p>
+</dd>
+<dt>Arguments:</dt><dd><ul class="simple">
+<li><p>path (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>): Path of configuration file</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><ul class="simple">
+<li><p>cfg (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Tuple[dict,</span> <span class="pre">dict]</span></code>): A collection(tuple) of configuration dict, divided into <cite>main_config</cite>,             <cite>create_cfg</cite> and <cite>system_config</cite> three parts.</p></li>
 </ul>
 </dd>
 </dl>
